@@ -1,7 +1,7 @@
-# This SQL query can be copied, pasted, and executed in pgAdmin.
+-- This SQL query can be copied, pasted, and executed in pgAdmin.
 
-# We use the pgAdmin's user interface to create the database and this script was generated automatically.
-# This query creates the database.
+-- We use the pgAdmin's user interface to create the database and this script was generated automatically.
+-- Create the database.
 CREATE DATABASE "MovieProductionCompany"
     WITH
     OWNER = postgres
@@ -9,3 +9,13 @@ CREATE DATABASE "MovieProductionCompany"
     LOCALE_PROVIDER = 'libc'
     CONNECTION LIMIT = -1
     IS_TEMPLATE = False;
+
+-- Create table Personal
+CREATE TABLE Personal (
+    UnionID SERIAL PRIMARY KEY,
+    Name VARCHAR(50),
+    DateOfBirth DATE,
+    Nationality VARCHAR(50),
+    Biography VARCHAR(100),
+    ContactInfo VARCHAR(100)
+);

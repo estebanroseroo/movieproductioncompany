@@ -1,4 +1,4 @@
--- This SQL query can be copied, pasted, and executed in pgAdmin.
+-- This script can be copied, pasted, and executed in pgAdmin.
 
 -- We use the pgAdmin's user interface to create the database.
 
@@ -119,7 +119,3 @@ JOIN Personal p ON i.UnionID = p.UnionID
 LEFT JOIN ProductionStaff ps ON p.UnionID = ps.UnionID
 ORDER BY m.Title
 ;
-
-
-
-

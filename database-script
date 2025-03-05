@@ -35,5 +35,17 @@ CREATE TABLE Movies (
     AwardsWon INT
 );
 
+-- Create table Contracts
+CREATE TABLE Contracts ( 
+    ContractID SERIAL PRIMARY KEY,
+    UnionID INT,
+    MovieID INT,
+    Cost DECIMAL(10,2),
+    FOREIGN KEY (UnionID) REFERENCES Personal (UnionID),
+    FOREIGN KEY (MovieID) REFERENCES Movies (MovieID)
+);
+
+
+
 
 

@@ -84,7 +84,10 @@ INSERT INTO Involvement (UnionID, MovieID) VALUES
 (3, 3);
 
 -- Retrieve a list of all movies along with their directors' names, release dates, and the total number of awards each movie has won. The list should be ordered by the number of awards in descending order.
-SELECT m.*
+SELECT m.Title, 
+p.Name AS Director, 
+m.ReleaseDate, 
+m.AwardsWon
 FROM Movies m
 JOIN Contracts c ON m.MovieID = c.MovieID
 JOIN Personal p ON c.UnionID = p.UnionID
@@ -93,7 +96,8 @@ WHERE c.UnionID IN (
 	FROM ProductionStaff 
 	WHERE Role = 'Director'
 )
-ORDER BY m.AwardsWon DESC;
+ORDER BY m.AwardsWon DESC
+;
 
 -- Calculate the total salary cost for each movie by summing up the salaries of all actors and directors involved in the movie. The list should include the movie title and the total salary cost, ordered by the total salary cost in descending order.
 SELECT m.Title, 
@@ -101,9 +105,20 @@ SUM(c.Cost) AS TotalSalaryCost
 FROM Movies m
 JOIN Contracts c ON m.MovieID = c.MovieID
 GROUP BY m.Title
-ORDER BY TotalSalaryCost DESC;
+ORDER BY TotalSalaryCost DESC
+;
 
-
+-- Retrieve a list of all movies along with the names of all actors, directors, and production staff involved in each movie, including their union_id. The list should be ordered by movie title.
+SELECT m.Title, 
+p.Name, 
+p.UnionID, 
+ps.Role
+FROM Movies m
+JOIN Involvement i ON m.MovieID = i.MovieID
+JOIN Personal p ON i.UnionID = p.UnionID
+LEFT JOIN ProductionStaff ps ON p.UnionID = ps.UnionID
+ORDER BY m.Title
+;
 
 
 

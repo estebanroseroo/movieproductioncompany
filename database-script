@@ -27,3 +27,13 @@ CREATE TABLE ProductionStaff (
     FOREIGN KEY (UnionID) REFERENCES Personal (UnionID)
 );
 
+-- Create table Movies
+CREATE TABLE Movies (
+    MovieID SERIAL PRIMARY KEY,
+    Title VARCHAR(100),
+    ReleaseDate DATE,
+    AwardsWon INT
+);
+
+
+

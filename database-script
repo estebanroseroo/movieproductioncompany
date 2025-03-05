@@ -19,3 +19,11 @@ CREATE TABLE Personal (
     Biography VARCHAR(100),
     ContactInfo VARCHAR(100)
 );
+
+-- Create table ProductionStaff
+CREATE TABLE ProductionStaff (
+    UnionID INT,
+    Role VARCHAR(50),
+    FOREIGN KEY (UnionID) REFERENCES Personal (UnionID)
+);
+

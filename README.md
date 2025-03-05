@@ -11,9 +11,8 @@ Tools:
 3. GitHub
 
 Features:
-1. ERD
+1. ERD image
 2. Database script
-3. Sql queries
 
 How to install:
 1. Copy the content of the database script

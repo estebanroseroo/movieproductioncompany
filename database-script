@@ -45,6 +45,16 @@ CREATE TABLE Contracts (
     FOREIGN KEY (MovieID) REFERENCES Movies (MovieID)
 );
 
+-- Create table Involvement
+CREATE TABLE Involvement (
+    InvolvementID SERIAL PRIMARY KEY,
+    UnionID INT,
+    MovieID INT,
+    FOREIGN KEY (UnionID) REFERENCES Personal (UnionID),
+    FOREIGN KEY (MovieID) REFERENCES Movies (MovieID)
+);
+
+
 
 
 

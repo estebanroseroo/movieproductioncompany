@@ -22,11 +22,11 @@ How to install:
 - Connect to the PostgreSQL server
 
 3. Create a new database in pgAdmin
-Right click in the PostgreSQL server
-Select create
-Select database
-Fill the name MovieProductionCompany
-Click save
+- Right click in the PostgreSQL server
+- Select create
+- Select database
+- Fill the name MovieProductionCompany
+- Click save
 
 4. Open the Query Tool
 - Right click on the MovieProductionCompany database
@@ -35,5 +35,5 @@ Click save
 5. Paste the content of the database script
 
 6. Execute the database script
-Click the execute button or press F5 button
+- Click the execute button or press F5 button
 

@@ -95,7 +95,13 @@ WHERE c.UnionID IN (
 )
 ORDER BY m.AwardsWon DESC;
 
-
+-- Calculate the total salary cost for each movie by summing up the salaries of all actors and directors involved in the movie. The list should include the movie title and the total salary cost, ordered by the total salary cost in descending order.
+SELECT m.Title, 
+SUM(c.Cost) AS TotalSalaryCost
+FROM Movies m
+JOIN Contracts c ON m.MovieID = c.MovieID
+GROUP BY m.Title
+ORDER BY TotalSalaryCost DESC;
 
 
 

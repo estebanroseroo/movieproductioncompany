@@ -1,5 +1,8 @@
 # movieproductioncompany
 We are designing a system for a Movie Production Company.
+Authors:
+1. Surushti Mahida
+2. Esteban Rosero
 
 Tools:
 1. pgAdmin
